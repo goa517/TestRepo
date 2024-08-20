@@ -1,0 +1,9 @@
+UPDATE Tag SET
+		TagName = '{{update_form.fieldState.TagName.isVisible ? update_form.formData.TagName : update_form.sourceData.TagName}}',
+		DeviceId = '{{update_form.fieldState.DeviceId.isVisible ? update_form.formData.DeviceId : update_form.sourceData.DeviceId}}',
+    TagAddress = '{{update_form.fieldState.TagAddress.isVisible ? update_form.formData.TagAddress : update_form.sourceData.TagAddress}}',
+		TagDataType = '{{update_form.fieldState.TagDataType.isVisible ? update_form.formData.TagDataType : update_form.sourceData.TagDataType}}',
+		TagAccessRight = '{{update_form.fieldState.TagAccessRight.isVisible ? update_form.formData.TagAccessRight : update_form.sourceData.TagAccessRight}}',
+		TagDescription = '{{update_form.fieldState.TagDescription.isVisible ? update_form.formData.TagDescription : update_form.sourceData.TagDescription}}',
+		Attributes = '{{update_form.fieldState.Attributes.isVisible ? update_form.formData.Attributes : update_form.sourceData.Attributes}}'
+WHERE TagId = {{data_table.selectedRow.TagId}};

@@ -1,0 +1,16 @@
+INSERT INTO Tag (
+	TagName,
+	DeviceId,
+	TagAddress,
+	TagDataType,
+	TagAccessRight,
+	TagDescription,
+	Attributes)
+VALUES (
+	'{{insert_form.formData.TagName}}',
+	'{{insert_form.formData.DeviceId}}',
+	'{{insert_form.formData.TagAddress}}',
+	'{{insert_form.formData.TagDataType}}',
+	'{{insert_form.formData.TagAccessRight}}',
+	'{{insert_form.formData.TagDescription}}',
+	'{{insert_form.formData.Attributes}}');

@@ -1,0 +1,2 @@
+DELETE FROM Tag
+  WHERE TagId = {{data_table.triggeredRow.TagId}};

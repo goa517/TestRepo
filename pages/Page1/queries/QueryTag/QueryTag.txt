@@ -1,0 +1,17 @@
+SELECT 
+    t.TagName,
+    t.TagAddress,
+    t.TagDataType,
+    t.TagAccessRight,
+    d.DeviceName,
+    dr.DriverName
+FROM 
+    Tag t
+JOIN 
+    Device d ON t.DeviceId = d.DeviceId
+JOIN 
+    Driver dr ON d.DriverId = dr.DriverId
+JOIN 
+    Projects p ON dr.ProjectId = p.ProjectId
+WHERE 
+    p.ProjectName = {{PrjSelect.selectedOptionValue}};
